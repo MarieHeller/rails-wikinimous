@@ -1,9 +1,9 @@
 <h1>Wikinimous</h1>
 <ul>
-  <li>
     <% @articles.each do |article| %>
+    <li>
     <%= link_to article.title, article_path(article)%>
-    <%= article.content %>
+    <%= article.content[0...100] %>
   </li>
   <%end%>
 </ul>
